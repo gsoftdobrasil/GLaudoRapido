@@ -1,3 +1,9 @@
+# Objetivo da plataforma
+'''Importante destacar o objetivo dessa ferramenta. Como estou na UTI com minha esposa e é muito cansativo ficar fazendo login diversas vezes, conexão caindo, Internet ruim, decidi criar essa aplicação que tem a função de um robô que vai substituir a operação humana.
+Ele varre e baixa todos os exames que ainda não foram baixados.
+Obs.: esse software não tem a intenção de acessar nenhuma informação que não seja do usuário autenticado, ou seja, do paciente que possui o seu cadastro autenticado. Essa ferramenta não acessa nada que não seja com a própria ação do paciente. 
+
+
 # Comandos de Execucao
 
 ## Instalacao
