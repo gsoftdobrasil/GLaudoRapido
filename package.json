@@ -1,0 +1,15 @@
+{
+  "name": "labvivalle-automation",
+  "version": "1.0.0",
+  "description": "Automacao do portal de resultados LabviValle/SCOLA",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app.js --once"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "playwright": "^1.49.1",
+    "yargs": "^17.7.2"
+  }
+}
