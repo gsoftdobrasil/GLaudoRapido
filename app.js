@@ -1,12 +1,24 @@
 const path = require("path");
+const fs = require("fs/promises");
 const dotenv = require("dotenv");
 const yargs = require("yargs/yargs");
 const { hideBin } = require("yargs/helpers");
 const { chromium } = require("playwright");
 
 const { login, gotoResults, extractPedidos } = require("./src/portal");
-const { downloadPdfForPedido } = require("./src/pdf");
+const { downloadPdfForPedido, extractDataExameFromPdf } = require("./src/pdf");
 const { savePedidos, appendDownloadLog, ensureDownloadsDir } = require("./src/store");
+const {
+  openDatabase,
+  initDatabase,
+  getDownloadedPedidosSet,
+  markPedidoDownloaded,
+  updateDataExameForPedidos,
+  getPedidosMissingDataExame,
+  updateDataExameForPedido,
+  updateFilePathForPedido,
+  closeDatabase,
+} = require("./src/db");
 
 dotenv.config();
 
@@ -16,6 +28,7 @@ const argv = yargs(hideBin(process.argv))
   .option("headful", { type: "boolean", default: false })
   .option("force", { type: "boolean", default: false })
   .option("pedidos", { type: "string", default: "" })
+  .option("backfill-data-exame", { type: "boolean", default: false })
   .parseSync();
 
 const LOGIN_URL = process.env.LOGIN_URL;
@@ -27,6 +40,7 @@ const PORTAL_SENHA = process.env.PORTAL_SENHA;
 const baseDownloadsDir = path.join(__dirname, "downloads");
 const pedidosPath = path.join(__dirname, "pedidos.json");
 const downloadsLogPath = path.join(__dirname, "downloads_log.json");
+const downloadsDbPath = path.join(__dirname, "downloads.sqlite");
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -37,6 +51,69 @@ function formatDateFolder(date = new Date()) {
   const mm = String(date.getMonth() + 1).padStart(2, "0");
   const yyyy = String(date.getFullYear());
   return `${dd}${mm}${yyyy}`;
+}
+
+async function buildDownloadsIndex(downloadsDir) {
+  const map = new Map();
+  const pending = [downloadsDir];
+  while (pending.length > 0) {
+    const current = pending.pop();
+    let entries = [];
+    try {
+      entries = await fs.readdir(current, { withFileTypes: true });
+    } catch {
+      continue;
+    }
+    for (const entry of entries) {
+      const fullPath = path.join(current, entry.name);
+      if (entry.isDirectory()) {
+        pending.push(fullPath);
+        continue;
+      }
+      if (entry.isFile() && entry.name.toLowerCase().endsWith(".pdf")) {
+        map.set(entry.name.toLowerCase(), fullPath);
+      }
+    }
+  }
+  return map;
+}
+
+async function backfillDataExameFromPdfs(db) {
+  const missing = await getPedidosMissingDataExame(db);
+  if (!missing.length) {
+    console.log("Nenhum registro sem data_exame encontrado.");
+    return;
+  }
+
+  const downloadsIndex = await buildDownloadsIndex(baseDownloadsDir);
+  let updated = 0;
+  for (const item of missing) {
+    const filename = `${item.pedido}.pdf`.toLowerCase();
+    const filePath = item.file_path || downloadsIndex.get(filename);
+    if (!filePath) {
+      continue;
+    }
+    if (!item.file_path) {
+      await updateFilePathForPedido(db, item.pedido, filePath);
+    }
+    const dataExame = await extractDataExameFromPdf(filePath, item.pedido);
+    if (dataExame) {
+      await updateDataExameForPedido(db, item.pedido, dataExame);
+      updated += 1;
+    }
+  }
+
+  console.log(`data_exame preenchida para ${updated} pedido(s).`);
+}
+
+async function runBackfillOnly() {
+  const db = await openDatabase(downloadsDbPath);
+  await initDatabase(db);
+  try {
+    await backfillDataExameFromPdfs(db);
+  } finally {
+    await closeDatabase(db).catch(() => {});
+  }
 }
 
 function validateEnv() {
@@ -54,6 +131,9 @@ async function runOnce() {
   validateEnv();
   const datedDownloadsDir = path.join(baseDownloadsDir, formatDateFolder());
   await ensureDownloadsDir(datedDownloadsDir);
+
+  const db = await openDatabase(downloadsDbPath);
+  await initDatabase(db);
 
   const browser = await chromium.launch({ headless: !argv.headful });
   const context = await browser.newContext();
@@ -73,6 +153,7 @@ async function runOnce() {
 
     const pedidos = await extractPedidos(page);
     await savePedidos(pedidos, pedidosPath);
+    await updateDataExameForPedidos(db, pedidos);
 
     const pedidosFiltro = argv.pedidos
       ? argv.pedidos
@@ -85,8 +166,23 @@ async function runOnce() {
         ? pedidos.filter((pedido) => pedidosFiltro.includes(pedido.pedido))
         : pedidos;
 
+    const pedidosElegiveis = argv.force
+      ? pedidosParaBaixar
+      : pedidosParaBaixar.filter(
+          (pedido) => pedido.temLaudo && pedido.laudoHref
+        );
+    const downloadedSet = argv.force
+      ? new Set()
+      : await getDownloadedPedidosSet(
+          db,
+          pedidosElegiveis.map((pedido) => pedido.pedido)
+        );
+
     for (const pedido of pedidosParaBaixar) {
       if (!pedido.temLaudo || !pedido.laudoHref) {
+        continue;
+      }
+      if (!argv.force && downloadedSet.has(pedido.pedido)) {
         continue;
       }
 
@@ -94,6 +190,24 @@ async function runOnce() {
         downloadsDir: datedDownloadsDir,
         force: argv.force,
       });
+
+      if (result.status === "baixado" || result.status === "ja_existe") {
+        await markPedidoDownloaded(db, {
+          pedido: pedido.pedido,
+          url: result.url || null,
+          filePath: result.filePath || null,
+          dataExame: pedido.dataExame || null,
+        });
+        if (!pedido.dataExame && result.filePath) {
+          const dataExameFromPdf = await extractDataExameFromPdf(
+            result.filePath,
+            pedido.pedido
+          );
+          if (dataExameFromPdf) {
+            await updateDataExameForPedido(db, pedido.pedido, dataExameFromPdf);
+          }
+        }
+      }
 
       await appendDownloadLog(
         {
@@ -109,10 +223,15 @@ async function runOnce() {
     await page.close().catch(() => {});
     await context.close().catch(() => {});
     await browser.close().catch(() => {});
+    await closeDatabase(db).catch(() => {});
   }
 }
 
 async function main() {
+  if (argv.backfillDataExame) {
+    await runBackfillOnly();
+    return;
+  }
   const runOnceOnly = argv.once || argv.watch <= 0;
   if (runOnceOnly) {
     await runOnce();

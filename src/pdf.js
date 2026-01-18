@@ -1,5 +1,6 @@
 const fs = require("fs/promises");
 const path = require("path");
+const pdfParse = require("pdf-parse");
 
 async function fileExists(filePath) {
   try {
@@ -34,7 +35,7 @@ async function downloadPdfForPedido(context, pedido, laudoHref, { downloadsDir, 
 
   const filePath = path.join(downloadsDir, `${pedido}.pdf`);
   if (!force && (await fileExists(filePath))) {
-    return { status: "ja_existe", url: null };
+    return { status: "ja_existe", url: null, filePath };
   }
 
   const maxRetries = 2;
@@ -93,6 +94,46 @@ async function downloadPdfForPedido(context, pedido, laudoHref, { downloadsDir, 
   return { status: "erro", url: null };
 }
 
+function normalizeText(text) {
+  return (text || "").replace(/\s+/g, " ").trim();
+}
+
+function findDateNearPedido(text, pedido) {
+  if (!text || !pedido) return null;
+  const normalized = normalizeText(text);
+  const idx = normalized.indexOf(pedido);
+  if (idx === -1) return null;
+  const windowStart = Math.max(0, idx - 120);
+  const windowEnd = Math.min(normalized.length, idx + 200);
+  const windowText = normalized.slice(windowStart, windowEnd);
+  const dateMatch = windowText.match(/\b([0-9]{2}\/[0-9]{2}\/[0-9]{4})\b/);
+  return dateMatch ? dateMatch[1] : null;
+}
+
+function findDateByLabel(text) {
+  if (!text) return null;
+  const normalized = normalizeText(text);
+  const labelMatch = normalized.match(
+    /Data\s+do\s+Exame[:\s]*([0-9]{2}\/[0-9]{2}\/[0-9]{4})/i
+  );
+  if (labelMatch) return labelMatch[1];
+  const fallbackMatch = normalized.match(/\b([0-9]{2}\/[0-9]{2}\/[0-9]{4})\b/);
+  return fallbackMatch ? fallbackMatch[1] : null;
+}
+
+async function extractDataExameFromPdf(filePath, pedido) {
+  if (!filePath) return null;
+  try {
+    const buffer = await fs.readFile(filePath);
+    const data = await pdfParse(buffer);
+    const text = data && data.text ? data.text : "";
+    return findDateNearPedido(text, pedido) || findDateByLabel(text);
+  } catch {
+    return null;
+  }
+}
+
 module.exports = {
   downloadPdfForPedido,
+  extractDataExameFromPdf,
 };

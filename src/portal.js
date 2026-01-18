@@ -94,6 +94,14 @@ async function extractPedidos(page) {
 
     const blockRegex =
       /Pedido:\s*([0-9-]+)[\s\S]*?(?=Pedido:\s*[0-9-]+|$)/gi;
+
+    const extractDataExame = (text) => {
+      if (!text) return null;
+      const match = text.match(
+        /Data\s+do\s+Exame:\s*([0-9]{2}\/[0-9]{2}\/[0-9]{4}(?:\s*[0-9]{2}:[0-9]{2})?)/i
+      );
+      return match ? match[1].trim() : null;
+    };
     let match;
     while ((match = blockRegex.exec(bodyText)) !== null) {
       const pedido = match[1];
@@ -102,12 +110,14 @@ async function extractPedidos(page) {
         /Entrega Estimada:\s*([0-9]{2}\/[0-9]{2}\/[0-9]{4}\s*[0-9]{2}:[0-9]{2})/i
       );
       const statusMatch = block.match(/Status:\s*([^\n\r]+)/i);
+      const dataExame = extractDataExame(block);
       const naoDisponivel = /Laudo n[aã]o dispon[ií]vel/i.test(block);
 
       pedidosMap.set(pedido, {
         pedido,
         entregaEstimada: entregaMatch ? entregaMatch[1].trim() : null,
         status: statusMatch ? statusMatch[1].trim() : null,
+        dataExame,
         temLaudo: !naoDisponivel,
         laudoHref: null,
       });
@@ -165,11 +175,21 @@ async function extractPedidos(page) {
       if (existing) {
         existing.temLaudo = true;
         existing.laudoHref = link.href || null;
+        if (!existing.dataExame) {
+          existing.dataExame = extractDataExame(
+            (link.closest("tr") || link.closest("table") || link.parentElement || link)
+              .innerText || ""
+          );
+        }
       } else {
+        const containerText =
+          (link.closest("tr") || link.closest("table") || link.parentElement || link)
+            .innerText || "";
         pedidosMap.set(found, {
           pedido: found,
           entregaEstimada: null,
           status: null,
+          dataExame: extractDataExame(containerText),
           temLaudo: true,
           laudoHref: link.href || null,
         });
