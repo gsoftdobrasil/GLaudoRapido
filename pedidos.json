@@ -1,5 +1,605 @@
 [
   {
+    "pedido": "7563310-01",
+    "entregaEstimada": "16/04/2026 23:59",
+    "status": "16/04/2026 08:08   \t6.6 - BRADESCO (BRADESCO EMP)   \t4 - ONCO   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE152C6EEB2F3F5FA3"
+  },
+  {
+    "pedido": "7559452-01",
+    "entregaEstimada": "20/04/2026 22:00",
+    "status": "14/04/2026 09:45   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE14296CD53B0B0B0F"
+  },
+  {
+    "pedido": "7558425-01",
+    "entregaEstimada": "14/04/2026 08:00",
+    "status": "14/04/2026 05:26   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE14286DEB125CBCDE"
+  },
+  {
+    "pedido": "7557180-01",
+    "entregaEstimada": "14/04/2026 08:00",
+    "status": "13/04/2026 17:41   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE142F51FD1D2969A9"
+  },
+  {
+    "pedido": "7556226-01",
+    "entregaEstimada": "13/04/2026 08:00",
+    "status": "12/04/2026 23:13   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE142E51F71D2969A9"
+  },
+  {
+    "pedido": "7554262-01",
+    "entregaEstimada": "12/04/2026 22:00",
+    "status": "11/04/2026 23:18   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE142C6FD13707070B"
+  },
+  {
+    "pedido": "7552618-01",
+    "entregaEstimada": "11/04/2026 23:59",
+    "status": "10/04/2026 23:20   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE142269EE142262A0"
+  },
+  {
+    "pedido": "7549934-01",
+    "entregaEstimada": "10/04/2026 22:00",
+    "status": "09/04/2026 22:48   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE132850F71F2F6F93"
+  },
+  {
+    "pedido": "7549483-01",
+    "entregaEstimada": "15/04/2026 22:00",
+    "status": "09/04/2026 10:53   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE13286DD136000002"
+  },
+  {
+    "pedido": "7549516-01",
+    "entregaEstimada": "13/04/2026 22:00",
+    "status": "09/04/2026 09:31   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE13286CE9132363A7"
+  },
+  {
+    "pedido": "7548640-01",
+    "entregaEstimada": "09/04/2026 23:59",
+    "status": "08/04/2026 21:23   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE132F54FC1E2868AA"
+  },
+  {
+    "pedido": "7545799-01",
+    "entregaEstimada": "08/04/2026 08:00",
+    "status": "07/04/2026 20:02   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE132C52FF0A54B4D6"
+  },
+  {
+    "pedido": "7543751-01",
+    "entregaEstimada": "06/04/2026 23:59",
+    "status": "06/04/2026 16:18   \t6.6 - BRADESCO (BRADESCO EMP)   \t19 - AGU.VG INT   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE132268E9283656B4"
+  },
+  {
+    "pedido": "7524864-01",
+    "entregaEstimada": "27/03/2026 23:59",
+    "status": "27/03/2026 09:33   \t6.6 - BRADESCO (BRADESCO EMP)   \t4 - ONCO   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE112168EA2C3A5AB8"
+  },
+  {
+    "pedido": "7518636-01",
+    "entregaEstimada": "24/03/2026 23:59",
+    "status": "24/03/2026 10:39   \t6.6 - BRADESCO (BRADESCO EMP)   \t4 - ONCO   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE102C53F21A2464A6"
+  },
+  {
+    "pedido": "22189-02",
+    "entregaEstimada": "07/04/2026 08:00",
+    "status": "20/03/2026 15:41   \t2.3 - PAGO HOSPITAL VIVALLE   \t9 - UTI NOVA   \t Ver detalhes",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": null
+  },
+  {
+    "pedido": "7509962-01",
+    "entregaEstimada": "20/03/2026 22:00",
+    "status": "19/03/2026 22:24   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE2F0C74DE222C6CAE"
+  },
+  {
+    "pedido": "22184-02",
+    "entregaEstimada": "22/04/2026 17:00",
+    "status": "19/03/2026 13:34   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF62E6280409424110"
+  },
+  {
+    "pedido": "7507972-01",
+    "entregaEstimada": "19/03/2026 22:00",
+    "status": "18/03/2026 22:28   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE2F020A3554E22367"
+  },
+  {
+    "pedido": "7506543-01",
+    "entregaEstimada": "18/03/2026 22:00",
+    "status": "18/03/2026 00:02   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE2F01074FB1BDDD3C"
+  },
+  {
+    "pedido": "7505279-01",
+    "entregaEstimada": "23/03/2026 22:00",
+    "status": "17/03/2026 12:52   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE2F00034EB4828280"
+  },
+  {
+    "pedido": "7503911-01",
+    "entregaEstimada": "17/03/2026 22:00",
+    "status": "16/03/2026 21:51   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE2F060E4B4F1F7F83"
+  },
+  {
+    "pedido": "7502226-01",
+    "entregaEstimada": "16/03/2026 22:00",
+    "status": "15/03/2026 23:32   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE2F05064CB1BDDD3C"
+  },
+  {
+    "pedido": "7500438-01",
+    "entregaEstimada": "15/03/2026 22:00",
+    "status": "14/03/2026 21:32   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67EE2F3B5EE52D3959B9"
+  },
+  {
+    "pedido": "7498501-01",
+    "entregaEstimada": "14/03/2026 08:00",
+    "status": "13/03/2026 16:16   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E9132F55F1105EBEDC"
+  },
+  {
+    "pedido": "7496155-01",
+    "entregaEstimada": "13/03/2026 23:59",
+    "status": "12/03/2026 22:25   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E9132D6FD035010101"
+  },
+  {
+    "pedido": "7494867-01",
+    "entregaEstimada": "12/03/2026 08:00",
+    "status": "11/03/2026 22:39   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E913236AD43F0F0F73"
+  },
+  {
+    "pedido": "7493522-01",
+    "entregaEstimada": "01/04/2026 23:59",
+    "status": "11/03/2026 12:04   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E9132266EC2C3A5AB8"
+  },
+  {
+    "pedido": "7492475-01",
+    "entregaEstimada": "11/03/2026 08:00",
+    "status": "10/03/2026 22:07   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E9132164EF162060A2"
+  },
+  {
+    "pedido": "7489741-01",
+    "entregaEstimada": "09/03/2026 23:59",
+    "status": "09/03/2026 12:50   \t6.6 - BRADESCO (BRADESCO EMP)   \t19 - AGU.VG INT   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E9122F57FF024C4C4E"
+  },
+  {
+    "pedido": "7471285-01",
+    "entregaEstimada": "27/02/2026 23:59",
+    "status": "27/02/2026 08:48   \t6.6 - BRADESCO (BRADESCO EMP)   \t4 - ONCO   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E9112669D538060604"
+  },
+  {
+    "pedido": "7463371-01",
+    "entregaEstimada": "23/02/2026 23:59",
+    "status": "23/02/2026 11:21   \t6.6 - BRADESCO (BRADESCO EMP)   \t4 - ONCO   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E910276BD63B0B0B0F"
+  },
+  {
+    "pedido": "7458571-01",
+    "entregaEstimada": "20/02/2026 23:59",
+    "status": "20/02/2026 15:27   \t6.6 - BRADESCO (BRADESCO EMP)   \t4 - ONCO   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92F03093456E02161"
+  },
+  {
+    "pedido": "7454157-01",
+    "entregaEstimada": "24/02/2026 22:00",
+    "status": "18/02/2026 13:32   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92F07094AB2BCDC3D"
+  },
+  {
+    "pedido": "7452706-01",
+    "entregaEstimada": "18/02/2026 22:00",
+    "status": "17/02/2026 22:07   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92F050D494C1A7A98"
+  },
+  {
+    "pedido": "7450471-01",
+    "entregaEstimada": "17/02/2026 22:00",
+    "status": "16/02/2026 22:07   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92F3B5EE1202E6EAC"
+  },
+  {
+    "pedido": "7450475-01",
+    "entregaEstimada": "17/02/2026 08:00",
+    "status": "16/02/2026 12:48   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92F3B5EE1243252B0"
+  },
+  {
+    "pedido": "7449463-01",
+    "entregaEstimada": "16/02/2026 11:13",
+    "status": "15/02/2026 22:45   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92E03064848167694"
+  },
+  {
+    "pedido": "7449086-01",
+    "entregaEstimada": "16/02/2026 22:00",
+    "status": "15/02/2026 22:44   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92E03024EB787878B"
+  },
+  {
+    "pedido": "7448370-01",
+    "entregaEstimada": "15/02/2026 08:00",
+    "status": "14/02/2026 22:12   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92E02044F4C1A7A98"
+  },
+  {
+    "pedido": "7445756-01",
+    "entregaEstimada": "14/02/2026 22:00",
+    "status": "13/02/2026 22:40   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92E070F3055E12260"
+  },
+  {
+    "pedido": "7445681-01",
+    "entregaEstimada": "14/02/2026 22:00",
+    "status": "13/02/2026 22:39   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92E070C30521C7C9E"
+  },
+  {
+    "pedido": "7445446-01",
+    "entregaEstimada": "19/02/2026 08:00",
+    "status": "13/02/2026 14:43   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92E070A4AB3838387"
+  },
+  {
+    "pedido": "7445458-01",
+    "entregaEstimada": "17/02/2026 22:00",
+    "status": "13/02/2026 09:58   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92E070A4BB0BEDE23"
+  },
+  {
+    "pedido": "7444035-01",
+    "entregaEstimada": "13/02/2026 08:00",
+    "status": "12/02/2026 22:55   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92E06074EB0BEDE23"
+  },
+  {
+    "pedido": "7444068-01",
+    "entregaEstimada": "13/02/2026 08:00",
+    "status": "12/02/2026 22:54   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92E060749B2BCDC3D"
+  },
+  {
+    "pedido": "7441759-01",
+    "entregaEstimada": "12/02/2026 22:00",
+    "status": "11/02/2026 22:58   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92E3B430C76C0C0C2"
+  },
+  {
+    "pedido": "7440019-01",
+    "entregaEstimada": "11/02/2026 22:00",
+    "status": "10/02/2026 22:32   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92E3A5BF8014D4D4D"
+  },
+  {
+    "pedido": "7438358-01",
+    "entregaEstimada": "10/02/2026 23:59",
+    "status": "09/02/2026 23:38   \t6.6 - BRADESCO (BRADESCO EMP)   \t3 - UTI   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92D01054EB5818181"
+  },
+  {
+    "pedido": "7436569-01",
+    "entregaEstimada": "16/02/2026 23:59",
+    "status": "08/02/2026 21:40   \t6.6 - BRADESCO (BRADESCO EMP)   \t12 - HOSP. DIA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92D070D3743137397"
+  },
+  {
+    "pedido": "7436575-01",
+    "entregaEstimada": "08/02/2026 22:00",
+    "status": "08/02/2026 21:38   \t6.6 - BRADESCO (BRADESCO EMP)   \t2 - PA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92D070D3056E02161"
+  },
+  {
+    "pedido": "7425205-01",
+    "entregaEstimada": "03/02/2026 23:59",
+    "status": "02/02/2026 22:21   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92C05064244127290"
+  },
+  {
+    "pedido": "7423757-01",
+    "entregaEstimada": "08/02/2026 08:00",
+    "status": "02/02/2026 11:27   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92C3B430C70FE1F63"
+  },
+  {
+    "pedido": "7422900-01",
+    "entregaEstimada": "02/02/2026 23:59",
+    "status": "01/02/2026 23:17   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92C3A42060551B1D1"
+  },
+  {
+    "pedido": "7420889-01",
+    "entregaEstimada": "01/02/2026 22:00",
+    "status": "31/01/2026 22:31   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92C38410D75C1C1C1"
+  },
+  {
+    "pedido": "7419151-01",
+    "entregaEstimada": "31/01/2026 08:00",
+    "status": "30/01/2026 22:43   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92B000041410D0D0D"
+  },
+  {
+    "pedido": "7417125-01",
+    "entregaEstimada": "30/01/2026 23:59",
+    "status": "29/01/2026 23:06   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92B06064CB2BCDC3D"
+  },
+  {
+    "pedido": "7415532-01",
+    "entregaEstimada": "30/01/2026 08:00",
+    "status": "29/01/2026 09:28   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92B04084FB2BCDC3D"
+  },
+  {
+    "pedido": "7412604-01",
+    "entregaEstimada": "28/01/2026 22:00",
+    "status": "27/01/2026 22:06   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92B395EFA1C2A6AA8"
+  },
+  {
+    "pedido": "7412767-01",
+    "entregaEstimada": "28/01/2026 22:00",
+    "status": "27/01/2026 22:05   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92B3941030955B5D5"
+  },
+  {
+    "pedido": "7412235-01",
+    "entregaEstimada": "02/02/2026 22:00",
+    "status": "27/01/2026 09:39   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92B395AF91C2A6AA8"
+  },
+  {
+    "pedido": "7410614-01",
+    "entregaEstimada": "27/01/2026 22:00",
+    "status": "26/01/2026 22:50   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92B3F44010650B0D2"
+  },
+  {
+    "pedido": "7411390-01",
+    "entregaEstimada": "27/01/2026 22:00",
+    "status": "26/01/2026 22:49   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92B385AE72B3B5BBF"
+  },
+  {
+    "pedido": "7408651-01",
+    "entregaEstimada": "26/01/2026 23:59",
+    "status": "25/01/2026 22:22   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92A060D3654E22367"
+  },
+  {
+    "pedido": "7407583-01",
+    "entregaEstimada": "25/01/2026 22:00",
+    "status": "24/01/2026 21:49   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92A050B3759E52664"
+  },
+  {
+    "pedido": "7406577-01",
+    "entregaEstimada": "24/01/2026 22:00",
+    "status": "23/01/2026 22:14   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92A04084BB1BDDD3C"
+  },
+  {
+    "pedido": "7405871-01",
+    "entregaEstimada": "24/01/2026 22:00",
+    "status": "23/01/2026 22:14   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92A3B420D0D59B9D9"
+  },
+  {
+    "pedido": "7406165-01",
+    "entregaEstimada": "24/01/2026 22:00",
+    "status": "23/01/2026 22:12   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92A04044EB0BEDE23"
+  },
+  {
+    "pedido": "7403948-01",
+    "entregaEstimada": "30/01/2026 22:00",
+    "status": "22/01/2026 22:43   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92A3943030856B6D4"
+  },
+  {
+    "pedido": "7404128-01",
+    "entregaEstimada": "23/01/2026 22:00",
+    "status": "22/01/2026 22:41   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92A3A5AF8024C4C4E"
+  },
+  {
+    "pedido": "7402674-01",
+    "entregaEstimada": "22/01/2026 23:59",
+    "status": "21/01/2026 22:08   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92A385FE2243252B0"
+  },
+  {
+    "pedido": "7400212-01",
+    "entregaEstimada": "21/01/2026 23:59",
+    "status": "20/01/2026 23:19   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E92A3E41060B5BBBDF"
+  },
+  {
+    "pedido": "7399561-01",
+    "entregaEstimada": "26/01/2026 22:00",
+    "status": "20/01/2026 10:36   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E8122F55FF024C4C4E"
+  },
+  {
+    "pedido": "7398682-01",
+    "entregaEstimada": "20/01/2026 22:00",
+    "status": "19/01/2026 20:02   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E8122E55F91F2F6F93"
+  },
+  {
+    "pedido": "7396035-01",
+    "entregaEstimada": "19/01/2026 22:00",
+    "status": "18/01/2026 21:30   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
+    "dataExame": null,
+    "temLaudo": true,
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E8122C6DD439050505"
+  },
+  {
     "pedido": "7395198-01",
     "entregaEstimada": "18/01/2026 22:00",
     "status": "17/01/2026 21:05   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
@@ -17,11 +617,11 @@
   },
   {
     "pedido": "21873-02",
-    "entregaEstimada": null,
-    "status": "16/01/2026 23:47   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tPendende",
+    "entregaEstimada": "29/01/2026 22:00",
+    "status": "16/01/2026 23:47   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
     "dataExame": null,
     "temLaudo": true,
-    "laudoHref": null
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF62E12A0509424110"
   },
   {
     "pedido": "7393641-01",
@@ -178,18 +778,18 @@
   {
     "pedido": "21800-02",
     "entregaEstimada": "22/01/2026 22:00",
-    "status": "05/01/2026 08:27   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tEm andamento",
+    "status": "05/01/2026 08:27   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
     "dataExame": null,
     "temLaudo": true,
-    "laudoHref": null
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF62E12A3E5FF81A2F"
   },
   {
     "pedido": "7369967-01",
     "entregaEstimada": "22/01/2026 22:00",
-    "status": "05/01/2026 08:18   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tEm andamento",
+    "status": "05/01/2026 08:18   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
     "dataExame": null,
     "temLaudo": true,
-    "laudoHref": null
+    "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E82F0C74DE253151B1"
   },
   {
     "pedido": "7369157-01",
@@ -218,7 +818,7 @@
   {
     "pedido": "7365572-01",
     "entregaEstimada": "20/01/2026 22:00",
-    "status": "02/01/2026 10:08   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tEm andamento",
+    "status": "02/01/2026 10:08   \t6.6 - BRADESCO (BRADESCO EMP)   \t9 - UTI NOVA   \t Ver detalhes\tLiberado",
     "dataExame": null,
     "temLaudo": true,
     "laudoHref": "http://189.2.215.52:8080/laudos/pedidopadraoc.asp?p=FF67E82F00044FB2BCDC3D"

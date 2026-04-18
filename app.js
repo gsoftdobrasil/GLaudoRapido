@@ -29,6 +29,14 @@ const argv = yargs(hideBin(process.argv))
   .option("force", { type: "boolean", default: false })
   .option("pedidos", { type: "string", default: "" })
   .option("backfill-data-exame", { type: "boolean", default: false })
+  .strict()
+  .fail((msg, err, yargsInstance) => {
+    if (err) throw err;
+    console.error(msg);
+    console.error("\nUso:");
+    console.error(yargsInstance.help());
+    process.exit(1);
+  })
   .parseSync();
 
 const LOGIN_URL = process.env.LOGIN_URL;
@@ -51,6 +59,10 @@ function formatDateFolder(date = new Date()) {
   const mm = String(date.getMonth() + 1).padStart(2, "0");
   const yyyy = String(date.getFullYear());
   return `${dd}${mm}${yyyy}`;
+}
+
+function logStep(message) {
+  console.log(`[${new Date().toISOString()}] ${message}`);
 }
 
 async function buildDownloadsIndex(downloadsDir) {
@@ -135,11 +147,13 @@ async function runOnce() {
   const db = await openDatabase(downloadsDbPath);
   await initDatabase(db);
 
+  logStep("Iniciando navegador e preparando sessao.");
   const browser = await chromium.launch({ headless: !argv.headful });
   const context = await browser.newContext();
   const page = await context.newPage();
 
   try {
+    logStep("Realizando login no portal.");
     await login(page, {
       idcpf: PORTAL_IDCPF,
       dtnasc: PORTAL_DTNASC,
@@ -148,10 +162,12 @@ async function runOnce() {
     });
 
     if (RESULT_URL) {
+      logStep("Abrindo tela de resultados.");
       await gotoResults(page, RESULT_URL);
     }
 
     const pedidos = await extractPedidos(page);
+    logStep(`Pedidos encontrados: ${pedidos.length}.`);
     await savePedidos(pedidos, pedidosPath);
     await updateDataExameForPedidos(db, pedidos);
 
@@ -165,6 +181,7 @@ async function runOnce() {
       pedidosFiltro.length > 0
         ? pedidos.filter((pedido) => pedidosFiltro.includes(pedido.pedido))
         : pedidos;
+    logStep(`Pedidos apos filtro: ${pedidosParaBaixar.length}.`);
 
     const pedidosElegiveis = argv.force
       ? pedidosParaBaixar
@@ -177,6 +194,9 @@ async function runOnce() {
           db,
           pedidosElegiveis.map((pedido) => pedido.pedido)
         );
+    logStep(
+      `Pedidos elegiveis: ${pedidosElegiveis.length}. Ja baixados: ${downloadedSet.size}.`
+    );
 
     for (const pedido of pedidosParaBaixar) {
       if (!pedido.temLaudo || !pedido.laudoHref) {
@@ -186,10 +206,16 @@ async function runOnce() {
         continue;
       }
 
+      logStep(`Baixando pedido ${pedido.pedido}.`);
       const result = await downloadPdfForPedido(context, pedido.pedido, pedido.laudoHref, {
         downloadsDir: datedDownloadsDir,
         force: argv.force,
       });
+      logStep(
+        `Resultado ${pedido.pedido}: ${result.status}${
+          result.error ? ` (${result.error})` : ""
+        }${result.attempts ? ` [tentativas: ${result.attempts}]` : ""}.`
+      );
 
       if (result.status === "baixado" || result.status === "ja_existe") {
         await markPedidoDownloaded(db, {

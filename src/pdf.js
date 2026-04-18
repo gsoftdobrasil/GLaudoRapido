@@ -11,7 +11,7 @@ async function fileExists(filePath) {
   }
 }
 
-async function waitForPdfUrl(page, timeoutMs = 30000) {
+async function waitForPdfUrl(page, timeoutMs = 15000) {
   const endAt = Date.now() + timeoutMs;
   while (Date.now() < endAt) {
     const url = page.url();
@@ -38,16 +38,16 @@ async function downloadPdfForPedido(context, pedido, laudoHref, { downloadsDir, 
     return { status: "ja_existe", url: null, filePath };
   }
 
-  const maxRetries = 2;
+  const maxRetries = 1;
   for (let attempt = 0; attempt <= maxRetries; attempt += 1) {
     let laudoPage;
     let popupPage;
     try {
       laudoPage = await context.newPage();
-      await laudoPage.goto(laudoHref, { waitUntil: "domcontentloaded", timeout: 20000 });
+      await laudoPage.goto(laudoHref, { waitUntil: "domcontentloaded", timeout: 10000 });
 
       const popupPromise = laudoPage
-        .waitForEvent("popup", { timeout: 10000 })
+        .waitForEvent("popup", { timeout: 5000 })
         .catch(() => null);
 
       const link = laudoPage.getByRole("link", {
@@ -86,7 +86,12 @@ async function downloadPdfForPedido(context, pedido, laudoHref, { downloadsDir, 
         await popupPage.close().catch(() => {});
       }
       if (attempt >= maxRetries) {
-        return { status: "erro", url: null, error: error.message || String(error) };
+        return {
+          status: "erro",
+          url: null,
+          error: error.message || String(error),
+          attempts: attempt + 1,
+        };
       }
     }
   }
